@@ -30,6 +30,11 @@
    destConnectionPin:(LAShapeConnectionPin)destConnectionPin;
 
 - (void)setNeedsDisplay;
+- (void)setEndpointsWithSourceObstacle:(id<LAObstacle>)sourceObstacle
+                   sourceConnectionPin:(LAShapeConnectionPin)sourceConnectionPin
+                          destObstacle:(id<LAObstacle>)destObstacle
+                     destConnectionPin:(LAShapeConnectionPin)destConnectionPin;
+
 - (size_t)size;
 - (CGPoint)pointAtIndex:(size_t)index;
 

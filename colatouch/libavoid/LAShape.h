@@ -26,7 +26,8 @@ typedef enum {
 
 @protocol LAShapeDelegate <NSObject>
 
-- (void)shape:(LAShape*)shape needsXPortionOffset:(double*)outXPortionOffset yPortionOffset:(double*)outYPortionOffset andInsideOffset:(double*)outInsideOffset forConnectionPin:(LAShapeConnectionPin)connectionPin;
+- (CGPoint)shape:(LAShape*)shape needsPointForConnectionPin:(LAShapeConnectionPin)connectionPin;
+- (LAShapeConnectionPin)shape:(LAShape*)shape needsTranslatedDirectionForConnectionPin:(LAShapeConnectionPin)connectionPin;
 
 @end
 
@@ -36,7 +37,6 @@ typedef enum {
     LARouter *_router;
     void *_shapeRef;
 
-    bool _hasCreatedConnectionPin[LAShapeConnectionPinMax + 1];
     id<LAShapeDelegate> _delegate;
 }
 
@@ -46,6 +46,7 @@ typedef enum {
 - (id)initWithRouter:(LARouter*)router rectangle:(CGRect)rect angle:(CGFloat)angle;
 
 - (void)moveToRectangle:(CGRect)rect angle:(CGFloat)angle;
-- (unsigned int)connectionPinIdentifier:(LAShapeConnectionPin)connectionPin;
+- (CGPoint)pointForConnectionPin:(LAShapeConnectionPin)connectionPin;
+- (LAShapeConnectionPin)translatedDirectionForConnectionPin:(LAShapeConnectionPin)connectionPin;
 
 @end

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 
+@class LAConnector;
+
+
 @protocol LAObstacle <NSObject>
 
 - (void)moveToRectangle:(CGRect)rect angle:(CGFloat)angle;

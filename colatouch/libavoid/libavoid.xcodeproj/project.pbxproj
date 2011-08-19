@@ -56,7 +56,7 @@
 		2E87636413FE96A4002D80C6 /* vpsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633913FE96A4002D80C6 /* vpsc.cpp */; };
 		2E87636513FE96A4002D80C6 /* vpsc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633A13FE96A4002D80C6 /* vpsc.h */; };
 		2E87636713FE96D9002D80C6 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87636613FE96D9002D80C6 /* libstdc++.dylib */; };
-		2E87640A13FE9B14002D80C6 /* LAConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87640813FE9B14002D80C6 /* LAConnector.h */; };
+		2E87640A13FE9B14002D80C6 /* LAConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87640813FE9B14002D80C6 /* LAConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E87640B13FE9B14002D80C6 /* LAConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E87640913FE9B14002D80C6 /* LAConnector.mm */; };
 		2E8C26AC13FDD04100E44933 /* LARouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8C26AA13FDD04100E44933 /* LARouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E8C26AD13FDD04100E44933 /* LARouter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C26AB13FDD04100E44933 /* LARouter.mm */; };
@@ -232,9 +232,10 @@
 			files = (
 				2E87634F13FE96A4002D80C6 /* libavoid.h in Headers */,
 				2E8C26AC13FDD04100E44933 /* LARouter.h in Headers */,
+				2E87630C13FDE923002D80C6 /* LAObstacle.h in Headers */,
 				2E87630513FDDBEC002D80C6 /* LAShape.h in Headers */,
 				2E87630913FDE837002D80C6 /* LAJunction.h in Headers */,
-				2E87630C13FDE923002D80C6 /* LAObstacle.h in Headers */,
+				2E87640A13FE9B14002D80C6 /* LAConnector.h in Headers */,
 				2E87633B13FE96A4002D80C6 /* assertions.h in Headers */,
 				2E87633D13FE96A4002D80C6 /* connectionpin.h in Headers */,
 				2E87633F13FE96A4002D80C6 /* connector.h in Headers */,
@@ -257,7 +258,6 @@
 				2E87636113FE96A4002D80C6 /* viscluster.h in Headers */,
 				2E87636313FE96A4002D80C6 /* visibility.h in Headers */,
 				2E87636513FE96A4002D80C6 /* vpsc.h in Headers */,
-				2E87640A13FE9B14002D80C6 /* LAConnector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

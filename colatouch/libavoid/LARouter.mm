@@ -26,7 +26,6 @@
 {
     self = [super init];
     if (self) {
-        // Convert the flags.
         Avoid::RouterFlag convertedFlags;
         switch (flags) {
             case LARouterWithPolyLineRouting:
@@ -37,12 +36,10 @@
                 break;
         }
         
-        // Create the class.
         _routerRef = new Avoid::Router(convertedFlags);
         ((Avoid::Router*)_routerRef)->setRoutingOption(Avoid::nudgeOrthogonalSegmentsConnectedToShapes, true);
         ((Avoid::Router*)_routerRef)->setTransactionUse(true);
         
-        // Update the member variables.
         _delegate = nil;
     }
     return self;

@@ -32,7 +32,30 @@ inline Avoid::ConnEnd MakeConnectorEndPoint(id<LAObstacle> obstacle, LAShapeConn
     else {
         // Assume this is a shape.
         LAShape *shape = (LAShape*)obstacle;
-        return Avoid::ConnEnd((Avoid::ShapeRef*)[shape shapeRef], [shape connectionPinIdentifier:connectionPin]);
+        CGPoint point = [shape pointForConnectionPin:connectionPin];
+        LAShapeConnectionPin direction = [shape translatedDirectionForConnectionPin:connectionPin];
+        
+        // Convert the values.
+        Avoid::Point avoidPoint(point.x, point.y);
+        Avoid::ConnDirFlag avoidDirection;
+        switch (direction) {
+            case LAShapeConnectionPinTop:
+                avoidDirection = Avoid::ConnDirUp;
+                break;
+            case LAShapeConnectionPinRight:
+                avoidDirection = Avoid::ConnDirRight;
+                break;
+            case LAShapeConnectionPinLeft:
+                avoidDirection = Avoid::ConnDirLeft;
+                break;
+            default:
+                // Assume it is down.
+                avoidDirection = Avoid::ConnDirDown;
+                break;
+        }
+        
+        // Create the connection endpoint.
+        return Avoid::ConnEnd(avoidPoint, avoidDirection);
     }
 }
 #pragma mark - Initialization and deallocation
@@ -44,11 +67,8 @@ inline Avoid::ConnEnd MakeConnectorEndPoint(id<LAObstacle> obstacle, LAShapeConn
         _router = [router retain];
         _routeCacheRef = new Avoid::Polygon();
         
-        // Calculate the endpoints.
         Avoid::ConnEnd sourceEndpoint = MakeConnectorEndPoint(sourceObstacle, sourceConnectionPin);
         Avoid::ConnEnd destEndPoint = MakeConnectorEndPoint(destObstacle, destConnectionPin);
-        
-        // Create the connector.
         _connectorRef = new Avoid::ConnRef((Avoid::Router*)[router routerRef], sourceEndpoint, destEndPoint);
         ((Avoid::ConnRef*)_connectorRef)->setCallback(ConnRefCallback, self);
     }
@@ -78,6 +98,13 @@ inline Avoid::ConnEnd MakeConnectorEndPoint(id<LAObstacle> obstacle, LAShapeConn
     
     // Notify the router.
     [[_router delegate] router:_router hasNewRouteForConnector:self];
+}
+
+- (void)setEndpointsWithSourceObstacle:(id<LAObstacle>)sourceObstacle sourceConnectionPin:(LAShapeConnectionPin)sourceConnectionPin destObstacle:(id<LAObstacle>)destObstacle destConnectionPin:(LAShapeConnectionPin)destConnectionPin
+{
+    Avoid::ConnEnd sourceEndpoint = MakeConnectorEndPoint(sourceObstacle, sourceConnectionPin);
+    Avoid::ConnEnd destEndPoint = MakeConnectorEndPoint(destObstacle, destConnectionPin);
+    ((Avoid::ConnRef*)_connectorRef)->setEndpoints(sourceEndpoint, destEndPoint);
 }
 
 - (size_t)size
