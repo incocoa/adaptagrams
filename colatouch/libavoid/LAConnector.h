@@ -11,7 +11,14 @@
 
 
 @class LARouter;
-@class LAConnectorRoute;
+@class LAConnector;
+
+
+@protocol LAConnectorDelegate <NSObject>
+
+- (void)connectorHasNewRoute:(LAConnector*)connector;
+
+@end
 
 
 @interface LAConnector : NSObject {
@@ -19,9 +26,12 @@
     LARouter *_router;
     void *_connectorRef;
     void *_routeCacheRef;
+    
+    id<LAConnectorDelegate> _delegate;
 }
 
 @property (nonatomic, readonly) void *connectorRef;
+@property (nonatomic, assign) id<LAConnectorDelegate> delegate;
 
 - (id)initWithRouter:(LARouter*)router
       sourceObstacle:(id<LAObstacle>)sourceObstacle

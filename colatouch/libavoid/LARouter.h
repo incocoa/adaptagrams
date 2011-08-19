@@ -20,29 +20,18 @@ typedef enum {
 } LARouterFlag;
 
 
-@protocol LARouterDelegate <NSObject>
-
-- (void)router:(LARouter*)router hasNewRouteForConnector:(LAConnector*)connector;
-
-@end
-
-
 @interface LARouter : NSObject {
 @private
     void *routerRef;
-    
-    id<LARouterDelegate> _delegate;
 }
 
 @property (nonatomic, readonly) void *routerRef;
-@property (nonatomic, assign) id<LARouterDelegate> delegate;
 
 @property (nonatomic) BOOL useTransactions;
 @property (nonatomic) BOOL nudgeOrthogonalSegmentsConnectedToShapes;
 @property (nonatomic) double orthogonalNudgeDistance;
 
 - (id)init;
-- (id)initWithFlags:(LARouterFlag)flags;
 
 - (void)processTransaction;
 

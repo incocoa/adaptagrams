@@ -14,6 +14,7 @@
 
 @implementation LAConnector
 @synthesize connectorRef = _connectorRef;
+@synthesize delegate = _delegate;
 
 #pragma mark - Helper functions
 
@@ -70,7 +71,10 @@ inline Avoid::ConnEnd MakeConnectorEndPoint(id<LAObstacle> obstacle, LAShapeConn
         Avoid::ConnEnd sourceEndpoint = MakeConnectorEndPoint(sourceObstacle, sourceConnectionPin);
         Avoid::ConnEnd destEndPoint = MakeConnectorEndPoint(destObstacle, destConnectionPin);
         _connectorRef = new Avoid::ConnRef((Avoid::Router*)[router routerRef], sourceEndpoint, destEndPoint);
+        ((Avoid::ConnRef*)_connectorRef)->setRoutingType(Avoid::ConnType_Orthogonal);
         ((Avoid::ConnRef*)_connectorRef)->setCallback(ConnRefCallback, self);
+        
+        _delegate = nil;
     }
     return self;
 } 
@@ -97,7 +101,7 @@ inline Avoid::ConnEnd MakeConnectorEndPoint(id<LAObstacle> obstacle, LAShapeConn
     *routeCache = ((Avoid::ConnRef*)_connectorRef)->displayRoute();
     
     // Notify the router.
-    [[_router delegate] router:_router hasNewRouteForConnector:self];
+    [_delegate connectorHasNewRoute:self];
 }
 
 - (void)setEndpointsWithSourceObstacle:(id<LAObstacle>)sourceObstacle sourceConnectionPin:(LAShapeConnectionPin)sourceConnectionPin destObstacle:(id<LAObstacle>)destObstacle destConnectionPin:(LAShapeConnectionPin)destConnectionPin

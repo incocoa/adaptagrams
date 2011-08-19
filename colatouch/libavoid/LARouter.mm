@@ -13,34 +13,18 @@
 
 @implementation LARouter
 @synthesize routerRef = _routerRef;
-@synthesize delegate = _delegate;
 
 #pragma mark - Initialization and deallocation
 
 - (id)init
 {
-    return [self initWithFlags:LARouterWithOrthogonalRouting];
-}
-
-- (id)initWithFlags:(LARouterFlag)flags
-{
     self = [super init];
     if (self) {
-        Avoid::RouterFlag convertedFlags;
-        switch (flags) {
-            case LARouterWithPolyLineRouting:
-                convertedFlags = Avoid::PolyLineRouting;
-                break;
-            default:
-                convertedFlags = Avoid::OrthogonalRouting;
-                break;
-        }
-        
-        _routerRef = new Avoid::Router(convertedFlags);
+        _routerRef = new Avoid::Router(Avoid::PolyLineRouting | Avoid::OrthogonalRouting);
         ((Avoid::Router*)_routerRef)->setRoutingOption(Avoid::nudgeOrthogonalSegmentsConnectedToShapes, true);
         ((Avoid::Router*)_routerRef)->setTransactionUse(true);
-        
-        _delegate = nil;
+        ((Avoid::Router*)_routerRef)->setRoutingPenalty(Avoid::segmentPenalty, Avoid::noPenalty);
+        ((Avoid::Router*)_routerRef)->setRoutingPenalty(Avoid::anglePenalty, Avoid::noPenalty);
     }
     return self;
 }
