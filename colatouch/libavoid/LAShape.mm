@@ -12,6 +12,8 @@
 
 
 @implementation LAShape
+@synthesize shapeRef = _shapeRef;
+@synthesize delegate = _delegate;
 
 #pragma mark - Helper functions
 
@@ -70,6 +72,12 @@ inline Avoid::Polygon MakePolygon(CGRect rect, CGFloat angle)
             Avoid::Rectangle rectangle(Avoid::Point(CGRectGetMinX(rect), CGRectGetMinY(rect)), Avoid::Point(CGRectGetMaxX(rect), CGRectGetMaxY(rect)));
             _shapeRef = new Avoid::ShapeRef((Avoid::Router*)[router routerRef], rectangle);
         }
+        
+        _hasCreatedConnectionPin[LAShapeConnectionPinTop] = false;
+        _hasCreatedConnectionPin[LAShapeConnectionPinRight] = false;
+        _hasCreatedConnectionPin[LAShapeConnectionPinBottom] = false;
+        _hasCreatedConnectionPin[LAShapeConnectionPinLeft] = false;
+        _delegate = nil;
     }
     return self;
 }
@@ -93,6 +101,49 @@ inline Avoid::Polygon MakePolygon(CGRect rect, CGFloat angle)
         Avoid::Rectangle rectangle(Avoid::Point(CGRectGetMinX(rect), CGRectGetMinY(rect)), Avoid::Point(CGRectGetMaxX(rect), CGRectGetMaxY(rect)));
         ((Avoid::Router*)[_router routerRef])->moveShape((Avoid::ShapeRef*)_shapeRef, rectangle);
     }
+}
+
+- (unsigned int)connectionPinIdentifier:(LAShapeConnectionPin)connectionPin
+{
+    if (!_hasCreatedConnectionPin[connectionPin]) {
+        // Calculate the offsets.
+        double xPortionOffset;
+        double yPortionOffset;
+        double insideOffset;
+        if (_delegate) {
+            [_delegate shape:self needsXPortionOffset:&xPortionOffset yPortionOffset:&yPortionOffset andInsideOffset:&insideOffset forConnectionPin:connectionPin];
+        }
+        else {
+            switch (connectionPin) {
+                case LAShapeConnectionPinTop:
+                    xPortionOffset = Avoid::ATTACH_POS_CENTRE;
+                    yPortionOffset = Avoid::ATTACH_POS_TOP;
+                    break;
+                case LAShapeConnectionPinRight:
+                    xPortionOffset = Avoid::ATTACH_POS_RIGHT;
+                    yPortionOffset = Avoid::ATTACH_POS_CENTRE;
+                    break;
+                case LAShapeConnectionPinLeft:
+                    xPortionOffset = Avoid::ATTACH_POS_LEFT;
+                    yPortionOffset = Avoid::ATTACH_POS_CENTRE;
+                    break;
+                default:
+                    // Assumes bottom.
+                    xPortionOffset = Avoid::ATTACH_POS_CENTRE;
+                    yPortionOffset = Avoid::ATTACH_POS_BOTTOM;
+                    break;
+            }
+            insideOffset = 0;
+        }
+        
+        // Calculate the connection direction.
+        Avoid::ConnDirFlag visDirs = Avoid::ConnDirNone; // TODO: verify if we need to change this.
+        
+        // Create the connection pin.
+        Avoid::ShapeConnectionPin *pinRef = new Avoid::ShapeConnectionPin((Avoid::ShapeRef*)_shapeRef, connectionPin, xPortionOffset, yPortionOffset, insideOffset, visDirs);
+        pinRef->setExclusive(false);
+    }
+    return connectionPin;
 }
 
 @end

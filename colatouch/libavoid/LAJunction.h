@@ -19,6 +19,8 @@
     void *_junctionRef;
 }
 
+@property (nonatomic, readonly) void *junctionRef;
+
 - (id)initWithRouter:(LARouter*)router rectangle:(CGRect)rect angle:(CGFloat)angle;
 
 - (void)moveToRectangle:(CGRect)rect angle:(CGFloat)angle;

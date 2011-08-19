@@ -13,6 +13,9 @@
 
 @implementation LARouter
 @synthesize routerRef = _routerRef;
+@synthesize delegate = _delegate;
+
+#pragma mark - Initialization and deallocation
 
 - (id)init
 {
@@ -36,6 +39,11 @@
         
         // Create the class.
         _routerRef = new Avoid::Router(convertedFlags);
+        ((Avoid::Router*)_routerRef)->setRoutingOption(Avoid::nudgeOrthogonalSegmentsConnectedToShapes, true);
+        ((Avoid::Router*)_routerRef)->setTransactionUse(true);
+        
+        // Update the member variables.
+        _delegate = nil;
     }
     return self;
 }
@@ -44,6 +52,45 @@
 {
     delete (Avoid::Router*)_routerRef;
     [super dealloc];
+}
+
+#pragma mark - Properties
+
+- (BOOL)useTransactions
+{
+    return ((Avoid::Router*)_routerRef)->transactionUse();
+}
+
+- (void)setUseTransactions:(BOOL)useTransactions
+{
+    ((Avoid::Router*)_routerRef)->setTransactionUse(useTransactions);
+}
+
+- (BOOL)nudgeOrthogonalSegmentsConnectedToShapes
+{
+    return ((Avoid::Router*)_routerRef)->routingOption(Avoid::nudgeOrthogonalSegmentsConnectedToShapes);
+}
+
+- (void)setNudgeOrthogonalSegmentsConnectedToShapes:(BOOL)nudgeOrthogonalSegmentsConnectedToShapes
+{
+    ((Avoid::Router*)_routerRef)->setRoutingOption(Avoid::nudgeOrthogonalSegmentsConnectedToShapes, nudgeOrthogonalSegmentsConnectedToShapes);
+}
+
+- (double)orthogonalNudgeDistance
+{
+    return ((Avoid::Router*)_routerRef)->orthogonalNudgeDistance();
+}
+
+- (void)setOrthogonalNudgeDistance:(double)orthogonalNudgeDistance
+{
+    ((Avoid::Router*)_routerRef)->setOrthogonalNudgeDistance(orthogonalNudgeDistance);
+}
+
+#pragma mark - Operations
+
+- (void)processTransaction
+{
+    ((Avoid::Router*)_routerRef)->processTransaction();
 }
 
 @end

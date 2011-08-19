@@ -56,6 +56,8 @@
 		2E87636413FE96A4002D80C6 /* vpsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633913FE96A4002D80C6 /* vpsc.cpp */; };
 		2E87636513FE96A4002D80C6 /* vpsc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633A13FE96A4002D80C6 /* vpsc.h */; };
 		2E87636713FE96D9002D80C6 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87636613FE96D9002D80C6 /* libstdc++.dylib */; };
+		2E87640A13FE9B14002D80C6 /* LAConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87640813FE9B14002D80C6 /* LAConnector.h */; };
+		2E87640B13FE9B14002D80C6 /* LAConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E87640913FE9B14002D80C6 /* LAConnector.mm */; };
 		2E8C26AC13FDD04100E44933 /* LARouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8C26AA13FDD04100E44933 /* LARouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E8C26AD13FDD04100E44933 /* LARouter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C26AB13FDD04100E44933 /* LARouter.mm */; };
 /* End PBXBuildFile section */
@@ -111,6 +113,8 @@
 		2E87633913FE96A4002D80C6 /* vpsc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vpsc.cpp; path = ../../cola/libavoid/vpsc.cpp; sourceTree = "<group>"; };
 		2E87633A13FE96A4002D80C6 /* vpsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vpsc.h; path = ../../cola/libavoid/vpsc.h; sourceTree = "<group>"; };
 		2E87636613FE96D9002D80C6 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		2E87640813FE9B14002D80C6 /* LAConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAConnector.h; sourceTree = "<group>"; };
+		2E87640913FE9B14002D80C6 /* LAConnector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAConnector.mm; sourceTree = "<group>"; };
 		2E8C26AA13FDD04100E44933 /* LARouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARouter.h; sourceTree = "<group>"; };
 		2E8C26AB13FDD04100E44933 /* LARouter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LARouter.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,8 @@
 				2E87630413FDDBEC002D80C6 /* LAShape.mm */,
 				2E87630713FDE837002D80C6 /* LAJunction.h */,
 				2E87630813FDE837002D80C6 /* LAJunction.mm */,
+				2E87640813FE9B14002D80C6 /* LAConnector.h */,
+				2E87640913FE9B14002D80C6 /* LAConnector.mm */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				2E87636113FE96A4002D80C6 /* viscluster.h in Headers */,
 				2E87636313FE96A4002D80C6 /* visibility.h in Headers */,
 				2E87636513FE96A4002D80C6 /* vpsc.h in Headers */,
+				2E87640A13FE9B14002D80C6 /* LAConnector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +335,7 @@
 				2E87636013FE96A4002D80C6 /* viscluster.cpp in Sources */,
 				2E87636213FE96A4002D80C6 /* visibility.cpp in Sources */,
 				2E87636413FE96A4002D80C6 /* vpsc.cpp in Sources */,
+				2E87640B13FE9B14002D80C6 /* LAConnector.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

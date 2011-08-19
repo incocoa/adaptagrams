@@ -12,6 +12,7 @@
 
 
 @implementation LAJunction
+@synthesize junctionRef = _junctionRef;
 
 #pragma mark - Initialization and deallocation
 
