@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E87630513FDDBEC002D80C6 /* LAShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87630313FDDBEC002D80C6 /* LAShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E87630613FDDBEC002D80C6 /* LAShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E87630413FDDBEC002D80C6 /* LAShape.mm */; };
+		2E87630913FDE837002D80C6 /* LAJunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87630713FDE837002D80C6 /* LAJunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E87630A13FDE837002D80C6 /* LAJunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E87630813FDE837002D80C6 /* LAJunction.mm */; };
+		2E87630C13FDE923002D80C6 /* LAObstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87630B13FDE923002D80C6 /* LAObstacle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E87633B13FE96A4002D80C6 /* assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631013FE96A4002D80C6 /* assertions.h */; };
+		2E87633C13FE96A4002D80C6 /* connectionpin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631113FE96A4002D80C6 /* connectionpin.cpp */; };
+		2E87633D13FE96A4002D80C6 /* connectionpin.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631213FE96A4002D80C6 /* connectionpin.h */; };
+		2E87633E13FE96A4002D80C6 /* connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631313FE96A4002D80C6 /* connector.cpp */; };
+		2E87633F13FE96A4002D80C6 /* connector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631413FE96A4002D80C6 /* connector.h */; };
+		2E87634013FE96A4002D80C6 /* connend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631513FE96A4002D80C6 /* connend.cpp */; };
+		2E87634113FE96A4002D80C6 /* connend.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631613FE96A4002D80C6 /* connend.h */; };
+		2E87634213FE96A4002D80C6 /* debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631713FE96A4002D80C6 /* debug.h */; };
+		2E87634313FE96A4002D80C6 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631813FE96A4002D80C6 /* geometry.cpp */; };
+		2E87634413FE96A4002D80C6 /* geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631913FE96A4002D80C6 /* geometry.h */; };
+		2E87634513FE96A4002D80C6 /* geomtypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631A13FE96A4002D80C6 /* geomtypes.cpp */; };
+		2E87634613FE96A4002D80C6 /* geomtypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631B13FE96A4002D80C6 /* geomtypes.h */; };
+		2E87634713FE96A4002D80C6 /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631C13FE96A4002D80C6 /* graph.cpp */; };
+		2E87634813FE96A4002D80C6 /* graph.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631D13FE96A4002D80C6 /* graph.h */; };
+		2E87634913FE96A4002D80C6 /* hyperedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87631E13FE96A4002D80C6 /* hyperedge.cpp */; };
+		2E87634A13FE96A4002D80C6 /* hyperedge.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87631F13FE96A4002D80C6 /* hyperedge.h */; };
+		2E87634B13FE96A4002D80C6 /* hyperedgetree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632013FE96A4002D80C6 /* hyperedgetree.cpp */; };
+		2E87634C13FE96A4002D80C6 /* hyperedgetree.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632113FE96A4002D80C6 /* hyperedgetree.h */; };
+		2E87634D13FE96A4002D80C6 /* junction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632213FE96A4002D80C6 /* junction.cpp */; };
+		2E87634E13FE96A4002D80C6 /* junction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632313FE96A4002D80C6 /* junction.h */; };
+		2E87634F13FE96A4002D80C6 /* libavoid.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632413FE96A4002D80C6 /* libavoid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E87635013FE96A4002D80C6 /* makepath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632513FE96A4002D80C6 /* makepath.cpp */; };
+		2E87635113FE96A4002D80C6 /* makepath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632613FE96A4002D80C6 /* makepath.h */; };
+		2E87635213FE96A4002D80C6 /* mtst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632713FE96A4002D80C6 /* mtst.cpp */; };
+		2E87635313FE96A4002D80C6 /* mtst.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632813FE96A4002D80C6 /* mtst.h */; };
+		2E87635413FE96A4002D80C6 /* obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632913FE96A4002D80C6 /* obstacle.cpp */; };
+		2E87635513FE96A4002D80C6 /* obstacle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632A13FE96A4002D80C6 /* obstacle.h */; };
+		2E87635613FE96A4002D80C6 /* orthogonal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632B13FE96A4002D80C6 /* orthogonal.cpp */; };
+		2E87635713FE96A4002D80C6 /* orthogonal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632C13FE96A4002D80C6 /* orthogonal.h */; };
+		2E87635813FE96A4002D80C6 /* router.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632D13FE96A4002D80C6 /* router.cpp */; };
+		2E87635913FE96A4002D80C6 /* router.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87632E13FE96A4002D80C6 /* router.h */; };
+		2E87635A13FE96A4002D80C6 /* shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87632F13FE96A4002D80C6 /* shape.cpp */; };
+		2E87635B13FE96A4002D80C6 /* shape.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633013FE96A4002D80C6 /* shape.h */; };
+		2E87635C13FE96A4002D80C6 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633113FE96A4002D80C6 /* timer.cpp */; };
+		2E87635D13FE96A4002D80C6 /* timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633213FE96A4002D80C6 /* timer.h */; };
+		2E87635E13FE96A4002D80C6 /* vertices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633313FE96A4002D80C6 /* vertices.cpp */; };
+		2E87635F13FE96A4002D80C6 /* vertices.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633413FE96A4002D80C6 /* vertices.h */; };
+		2E87636013FE96A4002D80C6 /* viscluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633513FE96A4002D80C6 /* viscluster.cpp */; };
+		2E87636113FE96A4002D80C6 /* viscluster.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633613FE96A4002D80C6 /* viscluster.h */; };
+		2E87636213FE96A4002D80C6 /* visibility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633713FE96A4002D80C6 /* visibility.cpp */; };
+		2E87636313FE96A4002D80C6 /* visibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633813FE96A4002D80C6 /* visibility.h */; };
+		2E87636413FE96A4002D80C6 /* vpsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E87633913FE96A4002D80C6 /* vpsc.cpp */; };
+		2E87636513FE96A4002D80C6 /* vpsc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87633A13FE96A4002D80C6 /* vpsc.h */; };
+		2E87636713FE96D9002D80C6 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87636613FE96D9002D80C6 /* libstdc++.dylib */; };
+		2E8C26AC13FDD04100E44933 /* LARouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8C26AA13FDD04100E44933 /* LARouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E8C26AD13FDD04100E44933 /* LARouter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C26AB13FDD04100E44933 /* LARouter.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E779BF313FDB99C0088DC26 /* liblibavoid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibavoid.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E87630313FDDBEC002D80C6 /* LAShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAShape.h; sourceTree = "<group>"; };
+		2E87630413FDDBEC002D80C6 /* LAShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAShape.mm; sourceTree = "<group>"; };
+		2E87630713FDE837002D80C6 /* LAJunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAJunction.h; sourceTree = "<group>"; };
+		2E87630813FDE837002D80C6 /* LAJunction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAJunction.mm; sourceTree = "<group>"; };
+		2E87630B13FDE923002D80C6 /* LAObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAObstacle.h; sourceTree = "<group>"; };
+		2E87631013FE96A4002D80C6 /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assertions.h; path = ../../cola/libavoid/assertions.h; sourceTree = "<group>"; };
+		2E87631113FE96A4002D80C6 /* connectionpin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectionpin.cpp; path = ../../cola/libavoid/connectionpin.cpp; sourceTree = "<group>"; };
+		2E87631213FE96A4002D80C6 /* connectionpin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionpin.h; path = ../../cola/libavoid/connectionpin.h; sourceTree = "<group>"; };
+		2E87631313FE96A4002D80C6 /* connector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connector.cpp; path = ../../cola/libavoid/connector.cpp; sourceTree = "<group>"; };
+		2E87631413FE96A4002D80C6 /* connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connector.h; path = ../../cola/libavoid/connector.h; sourceTree = "<group>"; };
+		2E87631513FE96A4002D80C6 /* connend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connend.cpp; path = ../../cola/libavoid/connend.cpp; sourceTree = "<group>"; };
+		2E87631613FE96A4002D80C6 /* connend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connend.h; path = ../../cola/libavoid/connend.h; sourceTree = "<group>"; };
+		2E87631713FE96A4002D80C6 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = debug.h; path = ../../cola/libavoid/debug.h; sourceTree = "<group>"; };
+		2E87631813FE96A4002D80C6 /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = geometry.cpp; path = ../../cola/libavoid/geometry.cpp; sourceTree = "<group>"; };
+		2E87631913FE96A4002D80C6 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = geometry.h; path = ../../cola/libavoid/geometry.h; sourceTree = "<group>"; };
+		2E87631A13FE96A4002D80C6 /* geomtypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = geomtypes.cpp; path = ../../cola/libavoid/geomtypes.cpp; sourceTree = "<group>"; };
+		2E87631B13FE96A4002D80C6 /* geomtypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = geomtypes.h; path = ../../cola/libavoid/geomtypes.h; sourceTree = "<group>"; };
+		2E87631C13FE96A4002D80C6 /* graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = graph.cpp; path = ../../cola/libavoid/graph.cpp; sourceTree = "<group>"; };
+		2E87631D13FE96A4002D80C6 /* graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = graph.h; path = ../../cola/libavoid/graph.h; sourceTree = "<group>"; };
+		2E87631E13FE96A4002D80C6 /* hyperedge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hyperedge.cpp; path = ../../cola/libavoid/hyperedge.cpp; sourceTree = "<group>"; };
+		2E87631F13FE96A4002D80C6 /* hyperedge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hyperedge.h; path = ../../cola/libavoid/hyperedge.h; sourceTree = "<group>"; };
+		2E87632013FE96A4002D80C6 /* hyperedgetree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hyperedgetree.cpp; path = ../../cola/libavoid/hyperedgetree.cpp; sourceTree = "<group>"; };
+		2E87632113FE96A4002D80C6 /* hyperedgetree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hyperedgetree.h; path = ../../cola/libavoid/hyperedgetree.h; sourceTree = "<group>"; };
+		2E87632213FE96A4002D80C6 /* junction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = junction.cpp; path = ../../cola/libavoid/junction.cpp; sourceTree = "<group>"; };
+		2E87632313FE96A4002D80C6 /* junction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = junction.h; path = ../../cola/libavoid/junction.h; sourceTree = "<group>"; };
+		2E87632413FE96A4002D80C6 /* libavoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libavoid.h; path = ../../cola/libavoid/libavoid.h; sourceTree = "<group>"; };
+		2E87632513FE96A4002D80C6 /* makepath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = makepath.cpp; path = ../../cola/libavoid/makepath.cpp; sourceTree = "<group>"; };
+		2E87632613FE96A4002D80C6 /* makepath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = makepath.h; path = ../../cola/libavoid/makepath.h; sourceTree = "<group>"; };
+		2E87632713FE96A4002D80C6 /* mtst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mtst.cpp; path = ../../cola/libavoid/mtst.cpp; sourceTree = "<group>"; };
+		2E87632813FE96A4002D80C6 /* mtst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mtst.h; path = ../../cola/libavoid/mtst.h; sourceTree = "<group>"; };
+		2E87632913FE96A4002D80C6 /* obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = obstacle.cpp; path = ../../cola/libavoid/obstacle.cpp; sourceTree = "<group>"; };
+		2E87632A13FE96A4002D80C6 /* obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obstacle.h; path = ../../cola/libavoid/obstacle.h; sourceTree = "<group>"; };
+		2E87632B13FE96A4002D80C6 /* orthogonal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = orthogonal.cpp; path = ../../cola/libavoid/orthogonal.cpp; sourceTree = "<group>"; };
+		2E87632C13FE96A4002D80C6 /* orthogonal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orthogonal.h; path = ../../cola/libavoid/orthogonal.h; sourceTree = "<group>"; };
+		2E87632D13FE96A4002D80C6 /* router.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = router.cpp; path = ../../cola/libavoid/router.cpp; sourceTree = "<group>"; };
+		2E87632E13FE96A4002D80C6 /* router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = router.h; path = ../../cola/libavoid/router.h; sourceTree = "<group>"; };
+		2E87632F13FE96A4002D80C6 /* shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shape.cpp; path = ../../cola/libavoid/shape.cpp; sourceTree = "<group>"; };
+		2E87633013FE96A4002D80C6 /* shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shape.h; path = ../../cola/libavoid/shape.h; sourceTree = "<group>"; };
+		2E87633113FE96A4002D80C6 /* timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = timer.cpp; path = ../../cola/libavoid/timer.cpp; sourceTree = "<group>"; };
+		2E87633213FE96A4002D80C6 /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer.h; path = ../../cola/libavoid/timer.h; sourceTree = "<group>"; };
+		2E87633313FE96A4002D80C6 /* vertices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vertices.cpp; path = ../../cola/libavoid/vertices.cpp; sourceTree = "<group>"; };
+		2E87633413FE96A4002D80C6 /* vertices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vertices.h; path = ../../cola/libavoid/vertices.h; sourceTree = "<group>"; };
+		2E87633513FE96A4002D80C6 /* viscluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viscluster.cpp; path = ../../cola/libavoid/viscluster.cpp; sourceTree = "<group>"; };
+		2E87633613FE96A4002D80C6 /* viscluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viscluster.h; path = ../../cola/libavoid/viscluster.h; sourceTree = "<group>"; };
+		2E87633713FE96A4002D80C6 /* visibility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = visibility.cpp; path = ../../cola/libavoid/visibility.cpp; sourceTree = "<group>"; };
+		2E87633813FE96A4002D80C6 /* visibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = visibility.h; path = ../../cola/libavoid/visibility.h; sourceTree = "<group>"; };
+		2E87633913FE96A4002D80C6 /* vpsc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vpsc.cpp; path = ../../cola/libavoid/vpsc.cpp; sourceTree = "<group>"; };
+		2E87633A13FE96A4002D80C6 /* vpsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vpsc.h; path = ../../cola/libavoid/vpsc.h; sourceTree = "<group>"; };
+		2E87636613FE96D9002D80C6 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		2E8C26AA13FDD04100E44933 /* LARouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LARouter.h; sourceTree = "<group>"; };
+		2E8C26AB13FDD04100E44933 /* LARouter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LARouter.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E779BF013FDB99C0088DC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87636713FE96D9002D80C6 /* libstdc++.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E779BE813FDB99C0088DC26 = {
+			isa = PBXGroup;
+			children = (
+				2E8C26A913FDD00900E44933 /* Classes */,
+				2E779C7D13FDBA670088DC26 /* Source */,
+				2E87636813FE96E4002D80C6 /* Frameworks */,
+				2E779BF413FDB99C0088DC26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E779BF413FDB99C0088DC26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E779BF313FDB99C0088DC26 /* liblibavoid.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E779C7D13FDBA670088DC26 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2E87631013FE96A4002D80C6 /* assertions.h */,
+				2E87631113FE96A4002D80C6 /* connectionpin.cpp */,
+				2E87631213FE96A4002D80C6 /* connectionpin.h */,
+				2E87631313FE96A4002D80C6 /* connector.cpp */,
+				2E87631413FE96A4002D80C6 /* connector.h */,
+				2E87631513FE96A4002D80C6 /* connend.cpp */,
+				2E87631613FE96A4002D80C6 /* connend.h */,
+				2E87631713FE96A4002D80C6 /* debug.h */,
+				2E87631813FE96A4002D80C6 /* geometry.cpp */,
+				2E87631913FE96A4002D80C6 /* geometry.h */,
+				2E87631A13FE96A4002D80C6 /* geomtypes.cpp */,
+				2E87631B13FE96A4002D80C6 /* geomtypes.h */,
+				2E87631C13FE96A4002D80C6 /* graph.cpp */,
+				2E87631D13FE96A4002D80C6 /* graph.h */,
+				2E87631E13FE96A4002D80C6 /* hyperedge.cpp */,
+				2E87631F13FE96A4002D80C6 /* hyperedge.h */,
+				2E87632013FE96A4002D80C6 /* hyperedgetree.cpp */,
+				2E87632113FE96A4002D80C6 /* hyperedgetree.h */,
+				2E87632213FE96A4002D80C6 /* junction.cpp */,
+				2E87632313FE96A4002D80C6 /* junction.h */,
+				2E87632413FE96A4002D80C6 /* libavoid.h */,
+				2E87632513FE96A4002D80C6 /* makepath.cpp */,
+				2E87632613FE96A4002D80C6 /* makepath.h */,
+				2E87632713FE96A4002D80C6 /* mtst.cpp */,
+				2E87632813FE96A4002D80C6 /* mtst.h */,
+				2E87632913FE96A4002D80C6 /* obstacle.cpp */,
+				2E87632A13FE96A4002D80C6 /* obstacle.h */,
+				2E87632B13FE96A4002D80C6 /* orthogonal.cpp */,
+				2E87632C13FE96A4002D80C6 /* orthogonal.h */,
+				2E87632D13FE96A4002D80C6 /* router.cpp */,
+				2E87632E13FE96A4002D80C6 /* router.h */,
+				2E87632F13FE96A4002D80C6 /* shape.cpp */,
+				2E87633013FE96A4002D80C6 /* shape.h */,
+				2E87633113FE96A4002D80C6 /* timer.cpp */,
+				2E87633213FE96A4002D80C6 /* timer.h */,
+				2E87633313FE96A4002D80C6 /* vertices.cpp */,
+				2E87633413FE96A4002D80C6 /* vertices.h */,
+				2E87633513FE96A4002D80C6 /* viscluster.cpp */,
+				2E87633613FE96A4002D80C6 /* viscluster.h */,
+				2E87633713FE96A4002D80C6 /* visibility.cpp */,
+				2E87633813FE96A4002D80C6 /* visibility.h */,
+				2E87633913FE96A4002D80C6 /* vpsc.cpp */,
+				2E87633A13FE96A4002D80C6 /* vpsc.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		2E87636813FE96E4002D80C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E87636613FE96D9002D80C6 /* libstdc++.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E8C26A913FDD00900E44933 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2E8C26AA13FDD04100E44933 /* LARouter.h */,
+				2E8C26AB13FDD04100E44933 /* LARouter.mm */,
+				2E87630B13FDE923002D80C6 /* LAObstacle.h */,
+				2E87630313FDDBEC002D80C6 /* LAShape.h */,
+				2E87630413FDDBEC002D80C6 /* LAShape.mm */,
+				2E87630713FDE837002D80C6 /* LAJunction.h */,
+				2E87630813FDE837002D80C6 /* LAJunction.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E779BF113FDB99C0088DC26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87634F13FE96A4002D80C6 /* libavoid.h in Headers */,
+				2E8C26AC13FDD04100E44933 /* LARouter.h in Headers */,
+				2E87630513FDDBEC002D80C6 /* LAShape.h in Headers */,
+				2E87630913FDE837002D80C6 /* LAJunction.h in Headers */,
+				2E87630C13FDE923002D80C6 /* LAObstacle.h in Headers */,
+				2E87633B13FE96A4002D80C6 /* assertions.h in Headers */,
+				2E87633D13FE96A4002D80C6 /* connectionpin.h in Headers */,
+				2E87633F13FE96A4002D80C6 /* connector.h in Headers */,
+				2E87634113FE96A4002D80C6 /* connend.h in Headers */,
+				2E87634213FE96A4002D80C6 /* debug.h in Headers */,
+				2E87634413FE96A4002D80C6 /* geometry.h in Headers */,
+				2E87634613FE96A4002D80C6 /* geomtypes.h in Headers */,
+				2E87634813FE96A4002D80C6 /* graph.h in Headers */,
+				2E87634A13FE96A4002D80C6 /* hyperedge.h in Headers */,
+				2E87634C13FE96A4002D80C6 /* hyperedgetree.h in Headers */,
+				2E87634E13FE96A4002D80C6 /* junction.h in Headers */,
+				2E87635113FE96A4002D80C6 /* makepath.h in Headers */,
+				2E87635313FE96A4002D80C6 /* mtst.h in Headers */,
+				2E87635513FE96A4002D80C6 /* obstacle.h in Headers */,
+				2E87635713FE96A4002D80C6 /* orthogonal.h in Headers */,
+				2E87635913FE96A4002D80C6 /* router.h in Headers */,
+				2E87635B13FE96A4002D80C6 /* shape.h in Headers */,
+				2E87635D13FE96A4002D80C6 /* timer.h in Headers */,
+				2E87635F13FE96A4002D80C6 /* vertices.h in Headers */,
+				2E87636113FE96A4002D80C6 /* viscluster.h in Headers */,
+				2E87636313FE96A4002D80C6 /* visibility.h in Headers */,
+				2E87636513FE96A4002D80C6 /* vpsc.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2E779BF213FDB99C0088DC26 /* libavoid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E779BF713FDB99C0088DC26 /* Build configuration list for PBXNativeTarget "libavoid" */;
+			buildPhases = (
+				2E779BF113FDB99C0088DC26 /* Headers */,
+				2E779BEF13FDB99C0088DC26 /* Sources */,
+				2E779BF013FDB99C0088DC26 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libavoid;
+			productName = libavoid;
+			productReference = 2E779BF313FDB99C0088DC26 /* liblibavoid.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E779BEA13FDB99C0088DC26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Marcelo Boff";
+			};
+			buildConfigurationList = 2E779BED13FDB99C0088DC26 /* Build configuration list for PBXProject "libavoid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2E779BE813FDB99C0088DC26;
+			productRefGroup = 2E779BF413FDB99C0088DC26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E779BF213FDB99C0088DC26 /* libavoid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E779BEF13FDB99C0088DC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8C26AD13FDD04100E44933 /* LARouter.mm in Sources */,
+				2E87630613FDDBEC002D80C6 /* LAShape.mm in Sources */,
+				2E87630A13FDE837002D80C6 /* LAJunction.mm in Sources */,
+				2E87633C13FE96A4002D80C6 /* connectionpin.cpp in Sources */,
+				2E87633E13FE96A4002D80C6 /* connector.cpp in Sources */,
+				2E87634013FE96A4002D80C6 /* connend.cpp in Sources */,
+				2E87634313FE96A4002D80C6 /* geometry.cpp in Sources */,
+				2E87634513FE96A4002D80C6 /* geomtypes.cpp in Sources */,
+				2E87634713FE96A4002D80C6 /* graph.cpp in Sources */,
+				2E87634913FE96A4002D80C6 /* hyperedge.cpp in Sources */,
+				2E87634B13FE96A4002D80C6 /* hyperedgetree.cpp in Sources */,
+				2E87634D13FE96A4002D80C6 /* junction.cpp in Sources */,
+				2E87635013FE96A4002D80C6 /* makepath.cpp in Sources */,
+				2E87635213FE96A4002D80C6 /* mtst.cpp in Sources */,
+				2E87635413FE96A4002D80C6 /* obstacle.cpp in Sources */,
+				2E87635613FE96A4002D80C6 /* orthogonal.cpp in Sources */,
+				2E87635813FE96A4002D80C6 /* router.cpp in Sources */,
+				2E87635A13FE96A4002D80C6 /* shape.cpp in Sources */,
+				2E87635C13FE96A4002D80C6 /* timer.cpp in Sources */,
+				2E87635E13FE96A4002D80C6 /* vertices.cpp in Sources */,
+				2E87636013FE96A4002D80C6 /* viscluster.cpp in Sources */,
+				2E87636213FE96A4002D80C6 /* visibility.cpp in Sources */,
+				2E87636413FE96A4002D80C6 /* vpsc.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2E779BF513FDB99C0088DC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E779BF613FDB99C0088DC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		2E779BF813FDB99C0088DC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = "private/$(PRODUCT_NAME)-Private/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+			};
+			name = Debug;
+		};
+		2E779BF913FDB99C0088DC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = "private/$(PRODUCT_NAME)-Private/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E779BED13FDB99C0088DC26 /* Build configuration list for PBXProject "libavoid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E779BF513FDB99C0088DC26 /* Debug */,
+				2E779BF613FDB99C0088DC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E779BF713FDB99C0088DC26 /* Build configuration list for PBXNativeTarget "libavoid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E779BF813FDB99C0088DC26 /* Debug */,
+				2E779BF913FDB99C0088DC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E779BEA13FDB99C0088DC26 /* Project object */;
+}
